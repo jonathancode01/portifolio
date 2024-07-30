@@ -125,16 +125,87 @@
 //          alert("digite o dia certo");
 // }
 
+// #region Saber o tipo
+// let data = 10;
 
-let data = parseFloat(prompt("Digite uma variavel: "));
+// switch (typeof data) {
+//     case "string":
+//         alert("e uma string");
+//         break;
+//     case 'number':
+//         alert("Numero");
+//         break;
+//     case 'nulo':
+//         alert("nulo");
+//         break
+//     default:
+// }
 
-switch (data) {
-    case isNaN(data):
-        alert("Dia da semana");
-        break;
-    case :
-        alert("Numero");
-        break;
-    default:
-        alert("Data: ");
-}
+// let getag = parseFloat(prompt("Digite seu numero:"))
+
+// if (!isNaN(getag)) {
+    
+//     let contador = 0
+    
+//     while(contador <= 20)   {  
+//         document.write(getag + "x" + contador + ": " + getag * contador + "<br>")
+//         contador++
+//     }
+//     document.write("break");
+// } else {
+//     document.write("BREAK");
+// }
+
+
+// let caca = parseFloat(prompt("Digite um numero:"));
+
+// if (!isNaN(caca)) {
+//     let contador = 0
+
+//     while(contador <= 20) {
+//         document.write(caca + "x" + contador + ": " + caca * contador + "<br>");
+
+//         contador++
+//     }
+// }
+// #region numero randomico 
+// let n1 = parseInt(Math.random() * 6 + 1);
+// let n2 = parseInt(Math.random() * 6 + 1);
+
+// let contador = 0
+// do{
+//     console.log(n1, n2)
+//     contador++
+//     n1 = parseInt(Math.random() * 6 + 1 );
+//     n2 = parseInt(Math.random() * 6 + 1 );
+
+// }
+// while (n1 !== n2) {
+//     console.log(n1, n2)
+//     contador++
+//     n1 = parseInt(Math.random() * 6 + 1 );
+//     n2 = parseInt(Math.random() * 6 + 1 );
+// }
+// console.log(contador);
+// colocar uma linha apos uma dezena
+
+// #region tabuada
+
+// let n = parseFloat(prompt("Digite seu numero: "));
+
+// for (let contador = 1; contador <= 1000; contador++) {
+//     document.write(n + "x" + contador + ": " + n * contador + "<br>")
+//      if (contador % 10 === 0 && contador > 0) {
+//     document.write("<hr>");
+// }
+// }
+// #region ano bissexto
+// let n = parseFloat(prompt("Digite seu numero: "));
+// let contador = 0; 
+
+// for (let numero = 1004; numero <= 2024; numero += 4){
+//     contador++
+//     if (numero % 4 === 0 ) {
+//         document.write("Ano " + numero + "<br>")
+//     }
+// }

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>break vs continue</title>
+</head>
+<body>
+    <script>
+        // #region break vs continue
+        // let contador = 1;
+        // for(i = 1; i <= 10; i++){
+        //     console.log(i)
+        //     if(i === 5){
+        //         break;
+        //         // break
+        //     }   
+        // }
+        // for(i = 1; i <= 10; i++){
+        //     if(i === 5){
+        //         continue;
+        //         // continue
+        //     }
+        //     console.log(i)
+        // }
+
+        
+        // let dado = 1;
+
+        // while(dado < 10) {
+        //     if(dado === 5){
+        //         break;
+        //     }
+        //     console.log(dado)
+        //     dado++
+        // }
+
+        // dado = 1;
+        // while(dado < 10) {
+        //     if(dado === 5){
+        //         dado++
+        //         continue;
+        //     }
+        //     console.log(dado)
+        //     dado++
+        // }
+
+        // #region jogo de dados
+        // let dadoJogado = 0;
+        // let dadoPar = 0;
+
+        // // enquanto
+        // while(true) {
+        //     let dado1 = parseInt(Math.random() * 6) + 1;
+        //     let dado2 = parseInt(Math.random() * 6) + 1;
+
+        //     console.log(dado1, dado2, dadoJogado, dadoPar)
+
+        //     dadoJogado++;
+        //     if( (dado1 + dado2) % 2 === 0 ){
+        //         dadoPar++;
+        //     }
+        //     if (dadoPar >= 10){
+        //         break;
+        // }   
+        // }
+        // console.log(dadoJogado)
+      
+        // let dadoJ = 0;
+        // let dadoUnico = 0;
+        // while(true){
+        //     let dado1 = parseInt(Math.random() * 6) + 1;
+        //     let dado2 = parseInt(Math.random() * 6) + 1;
+        //     console.log(dado1, dado2, dadoJ, dadoUnico)
+        //     if(dado1 === dado2){
+        //         continue
+        //     }
+        //         dadoJ++;
+        //         // soma dos dois dados seja par
+        //         if ((dado1 + dado2) % 2 === 0) {
+        //             dadoUnico++;
+        //         }
+        //         if(dadoUnico >= 10){
+        //             break;
+        //         }
+        // }
+        // console.log(dadoJ);
+// #endregion
+        // mostrar numeros de 0 a 100 
+    //     for (let i = 0; i <= 100; i++) {
+    //         if(i % 10 === 0){
+    //             continue;
+    //         }
+    //         console.log(i);
+    //     // pegar um numero aleatorio e ver se o resto da divisão deles se igualam a 0
+    //     let num = parseInt(Math.random() * 100) + 1;
+    //     console.log("Numero sorteado: " + num);
+
+    //     if(i % num === 0){
+    //         break
+    //     }
+    // }
+
+    for (let i = 1004; i <= 2024; i += 4){
+        let anoB = i % 100 != 0 || i % 400 === 0;
+
+        console.log(anoB, i);
+
+        if(anoB){
+            console.log("e bissexto")
+        }else {
+            console.log("não e bissexto")
+        }
+}
+
+
+    
+
+
+    </script>
+</body>
+</html>
