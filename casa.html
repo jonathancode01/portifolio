@@ -101,19 +101,35 @@
     //     }
     // }
 
-    for (let i = 1004; i <= 2024; i += 4){
-        let anoB = i % 100 != 0 || i % 400 === 0;
-
-        console.log(anoB, i);
-
-        if(anoB){
-            console.log("e bissexto")
-        }else {
-            console.log("não e bissexto")
-        }
-}
 
 
+//     for (let i = 1004; i <= 2024; i += 4){
+//         let anoB = i % 100 != 0 || i % 400 === 0;
+
+//         console.log(anoB, i);
+
+//         if(anoB){
+//             console.log("e bissexto")
+//         }else {
+//             console.log("não e bissexto")
+//         }
+// }
+
+
+ for(let i = 1004; i <= 2024; i++){
+
+     if( i % 4 === 0){
+        continue;
+        
+     } 
+     let num = parseInt(Math.random() * 10 + 1);
+     console.log(num)
+
+
+     if(num % 4 === 0){
+        break;
+    }
+ }
     
 
 

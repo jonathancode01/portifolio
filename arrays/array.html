@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // função construtor 
+        // let nomes = new Array("John", "Jonathan", "Silva",);
+        // for(let i = 0; i < nomes.length; i++){
+        //     document.write(nomes[i] + "<br>");
+        // }
+
+
+        // adicionar mais um nome na lista a partir de um prompt
+        // let nomes = new Array("John", "Jonathan", "Silva",);
+        // let nome2 = prompt("Digite seu nome: ");
+        // nomes[nomes.length] = nome2;
+        // for(let i = 0; i < nomes.length; i++){
+        //     document.write(nomes[i] + "<br>");
+        // }
+        // document.write("A lista tem: " + nomes.length + " nomes");
+
+        // multiplicar os elementos de um array
+        // let array1 = [1,2,3,4,5,6,7,8,9,10];
+        // let array2 = [];
+        // for(let i = 0; i < array1.length; i++){
+        //     let array = array1[i] * 2;
+        //     array2.push(array);
+        // }
+        // console.log(array2)
+
+        // dado um array com os dias da semana mostrar um alert qual e o dia atual
+        // let dias = ["domingo", "segunda", "terca", "quarta", "quinta", "sexta", "sabado"];
+        // let hoje = new Date();
+        // let dia = hoje.getDay();
+        // alert(dias[dia]);
+
+        // const array = [1,2,3,4,5,6,7,8,9,10];
+        // soma = 0;
+
+        // for(let i = 0; i < array.length; i++){
+        //     soma += array[i]; // soma = soma + array[i]
+        // }
+        // alert(soma)
+
+        // conter valores de tipos diferentes e somar apenas os valores numericos
+
+        // const array = [2,,7,45,65,9,4,3,6,66,666,3,"let","const", "var", [], false, null, undefined];
+        // let soma = 0;
+
+        // for(let i = 0; i < array.length; i++){
+        //     let number = array[i];
+        //     if(typeof number === "number"){
+        //         soma = soma + number; //
+        //     }
+        // }
+        // alert("A soma dos numeros e: " + soma)
+
+
+        // numero que esta no meio do array
+        // const array = [1,2,3,4,5,6,7,8,[],undefined,null,false,"Varios textos",[]];
+        // let numero = parseFloat(array.length / 2);
+        // alert(array[numero])
+
+        const arr = [1,2,3,4,5,6,7,8,9,10];
+
+        // mostrar a soma dos numeros impares
+
+        let soma = 0;
+
+        for(let i = 0; i < arr.length; i++){
+        // mostrar a soma dos numeros impares
+            if(arr[i] % 2 !== 0){
+                soma += arr[i];
+            }
+        }
+        alert(soma)
+ 
+    </script>
+</body>
+</html>
