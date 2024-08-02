@@ -65,20 +65,37 @@
         // let numero = parseFloat(array.length / 2);
         // alert(array[numero])
 
-        const arr = [1,2,3,4,5,6,7,8,9,10];
+        // const arr = [1,2,3,4,5,6,7,8,9,10];
+        // let soma = 0;
+        // for(let i = 0; i < arr.length; i++){
+        // // mostrar a soma dos numeros impares
+        //     if(arr[i] % 2 !== 0){ // se for impar
+        //         soma += arr[i]; // soma = soma + array[i]
+        //     }
+        // }
+        // alert(soma)
 
-        // mostrar a soma dos numeros impares
+        // ver se o array tem um valor NaN ou undefined ou null
+        // const array = [1,2,3,4,5,6,7,8,9,10,NaN,undefined, null];
+        // let soma = 0;
+        // for(let i = 0; i < array.length; i++){
+        //     if(array[i] === NaN || array[i] === undefined || array[i] === null){
+        //         // se encontrar um valor NaN ou undefined ou null mostre true
+        //         break;
+        //         console.log(true);
+        //     }else {
+        //         // se encontrar um valor diferente de NaN ou undefined ou null mostre false
+        //         console.log(false);
+        //     }
+        // }
 
-        let soma = 0;
+        const nomes = ["John", "Jonathan", "Silva"];
 
-        for(let i = 0; i < arr.length; i++){
-        // mostrar a soma dos numeros impares
-            if(arr[i] % 2 !== 0){ // se for impar
-                soma += arr[i]; // soma = soma + array[i]
-            }
-        }
-        alert(soma)
- 
+        // mostrar numero ou algo de tras pra frente
+        for(let i = nomes.length - 1; i >= 0; i--){ // SE iNDICE for maior ou igual a 0
+            console.log(nomes[i]);
+        }        
+        
     </script>
 </body>
 </html>
