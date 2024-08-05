@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="titulo">Domdom</h1>
+    <p id="paragrafo"><i>ipsum dolor sit amet consectetur adipisicing elit.</i>  Laudantium libero asperiores qui quisquam in. Reprehenderit voluptas reiciendis, aut, voluptatem rem laudantium consequatur veritatis necessitatibus fugiat beatae ipsam deleniti commodi fuga!</p>
+    <hr>
+    <h3>Lista de Tarefas</h3>
+
+    <ul id="listaTarefas">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <input type="text" id="user" value="placeholder">
+
+
+    <script>
+        const lista = document.getElementById("listaTarefas");
+        let novaTask = "Aplicar a Vagas de emprego";
+
+        lista.innerHTML = lista.innerHTML + "<li>" + novaTask + "</li>";
+        
+    </script>
+</body>
+</html>
