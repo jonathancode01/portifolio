@@ -56,21 +56,12 @@
       const info = document.getElementById("alunos");
       let infoHTML = ""
 
-      for(let i = 0; i < alunos.length; i++){
-        infoHTML += `<li>${alunos[i].nome}: <ul>`
-          // somar todas as notas e dar a media
-        let media = 0
-        for(let j = 0; j < alunos[i].notas.length; j++){
-            media += alunos[i].notas[j];
-        }
-        media = media / alunos[i].notas.length;
-
-        infoHTML += `<li>${media}</li>`;
-
-        infoHTML += `</ul></li>`
-    }
-      info.innerHTML = infoHTML
-         
+      // mostrar a media do lado do nome
+          for(let i = 0; i < alunos.length; i++){
+              let media = (alunos[i].notas[0] + alunos[i].notas[1] + alunos[i].notas[2] + alunos[i].notas[3]) / 4
+              infoHTML += `<li>${alunos[i].nome}: ${media}</li>`
+          }
+      info.innerHTML = infoHTML;
     </script>
 </body>
 </html>
