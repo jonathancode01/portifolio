@@ -56,10 +56,9 @@
       const info = document.getElementById("alunos");
       let infoHTML = ""
 
-      // mostrar a media do lado do nome
           for(let i = 0; i < alunos.length; i++){
               let media = (alunos[i].notas[0] + alunos[i].notas[1] + alunos[i].notas[2] + alunos[i].notas[3]) / 4
-              infoHTML += `<li>${alunos[i].nome}: ${media}</li>`
+              infoHTML += `<li>` + "Nome: " + `${alunos[i].nome} - `+ "Media: " +` ${media}</li>`
           }
       info.innerHTML = infoHTML;
     </script>
