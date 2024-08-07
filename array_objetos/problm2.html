@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="alunos">
+        <li>Jonathan:
+            <ul>
+                <li>1</li>
+                <li>3</li>
+                <li>3</li>
+                <li>8</li>
+            </ul>
+        </li>
+
+        <li>Priscila: 
+            <ul>
+                <li>1</li>
+                <li>3</li>
+                <li>3</li>
+                <li>8</li>
+            </ul>
+        </li>
+
+        <li>Flamengo: 
+            <ul>
+                <li>1</li>
+                <li>3</li>
+                <li>3</li>
+                <li>8</li>
+            </ul>
+        </li>
+    </div>
+
+    <script>
+
+      const alunos = [
+        {
+          nome: "Jonathan",
+          notas: [4,9,8,10],
+        },
+        {
+          nome: "Priscila",
+          notas: [10,6,3,2],
+        },
+        {
+          nome: "Flamengo",
+          notas: [1,10,9,7],
+        }
+      ]
+
+      const info = document.getElementById("alunos");
+      let infoHTML = ""
+
+      for(let i = 0; i < alunos.length; i++){
+        infoHTML += `<li>${alunos[i].nome}: <ul>`
+        for(let j = 0; j < alunos[i].notas.length; j++){
+          infoHTML += `<li>${alunos[i].notas[j]}</li>`
+        }
+        infoHTML += `</ul></li>`
+    }
+      info.innerHTML = infoHTML
+         
+    </script>
+</body>
+</html>

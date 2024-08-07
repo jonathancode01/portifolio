@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <style>
+
+
+    </style>
+    <div id="alunos">
+        <h2>Nome 1:</h2>
+        <p>Notas: </p>
+            <ul>
+                <li></li>
+
+            </ul>
+            <p>Media:</p>
+            <p>Aprovado:</p>
+    </div>
+
+    <script>
+        // objeto alunos e dentro desse objeto tem um array de notas
+        const alunos = {
+                nome: "João",
+                notas: [10,9,3,8],
+
+            }       
+           
+      const info = document.getElementById("alunos");
+
+      info.innerHTML = "<h2>Aluno: " + alunos.nome + "</h2>";
+      info.innerHTML += "<p>Notas: " + alunos.notas + "</p>";
+      info.innerHTML += "<ul>"
+        let soma = 0;
+      for(let i = 0; i < alunos.notas.length; i++){
+        // calcular a media
+        soma += alunos.notas[i];
+        info.innerHTML += "<li>Media: " + alunos.notas[i] + "</li>";   
+      }
+      let media = soma / alunos.notas.length
+
+      info.innerHTML += "<p>Media: " + media + "</p>"
+    
+      if(media >=7) {
+        info.innerHTML += "<p>Aprovado</p>"
+      } else {
+        info.innerHTML += "<p>Reprovado</p>"
+      }
+      // --------------------------------------------------------------// -->
+
+
+    </script>
+</body>
+</html>

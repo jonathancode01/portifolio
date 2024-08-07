@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table, th, td {
+            border: 0.5px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+    <h1>Produtos</h1>
+    <table id="produtos"> 
+        <tr>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Quantidade em estoque</th>
+        </tr>
+        <tr>
+            <td>Caneta</td>
+            <td>R$ 5,00</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Borracha</td>
+            <td>R$ 2,00</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Lapis</td>
+            <td>R$ 5,00</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Regua</td>
+            <td>R$ 2,00</td>
+            <td>100</td>
+        </tr>
+    </table>
+
+    <script>
+            const produtos = [
+            {
+                nome: "Caneta",
+                preco: 5,
+                estoque: 50
+            },
+            {
+                nome: "Borracha",
+                preco: 2,
+                estoque: 100
+            },
+            {
+                nome: "Lapis",
+                preco: 5,
+                estoque: 50
+            },
+            {
+                nome: "Regua",
+                preco: 2,
+                estoque: 100
+            }
+        ]
+
+        tabelaProdutos = document.getElementById("produtos");
+
+        for(let i = 0; i < produtos.length; i++){
+            produtos.innerHTML += ` 
+                <tr>
+                    <td>${produtos[i].nome}</td>
+                    <td>${produtos[i].preco.toFixed(2)}</td> //toFixed arredonda o valor do elemento 
+                    <td>${produtos[i].estoque}</td>
+            `
+        }
+    </script>
+</body>
+</html>

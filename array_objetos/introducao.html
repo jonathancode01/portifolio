@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="pessoas">
+        <!-- <li>Jonathan: john@email.com</li>
+        <li>Flalala: john@email.com</li>
+        <li>Blalalala: john@email.com</li>
+        <li>LOOP: john@email.com</li> -->
+    </ul>
+
+    <script>
+        const pessoas = [
+            {
+                nome: "Jonathan",
+                email : "john@email.com"
+            },
+            {
+                nome: "Flalala",
+                email : "Flalala@email.com"
+            },
+            {
+                nome: "Blalalala",
+                email : "Blalalala@email.com"
+            },
+            {
+                nome: "LOOP",
+                email : "LOOP@email.com"
+            }
+        ]
+
+        const listaPessoas = document.getElementById("pessoas");
+            for(let i = 0; i < pessoas.length; i++){
+                
+                listaPessoas.innerHTML += "<li> " + pessoas[i].nome + " : " + pessoas[i].email +" </li>" 
+            }
+    </script>
+</body>
+</html>
