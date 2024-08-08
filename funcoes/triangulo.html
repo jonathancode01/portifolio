@@ -6,41 +6,41 @@
     <title>Funções</title>
 </head>
 <body>
-    <h2>Funções</h2>
-    <input type="number" id="number">
-    <button onclick="mostrarTabuada()">Mostrar tabuada</button>
-    <button onclick="apagarTabuada()" >Apagar</button>
-
-    <div id="tabuada">
-        
-    </div>
+    <h2>Função area do triangulo</h2>
+    <h1>Base:</h1>
+    <input type="number" id="base">
+    <h1>Altura: </h1>
+    <input type="number" id="altura">
+    <button onclick="calcularArea()">Calcular</button>
+    <div id="triangulo"></div>
 
     <script>
-        const btn = document.getElementById("number");
-        const tabuada = document.getElementById("tabuada");
 
-        let tabuadaHTML = ""
+        const triangulo = document.getElementById("triangulo");
 
-            function mostrarTabuada(){
-                const btnValue = parseFloat(btn.value);
-                apagarTabuada();
+        function calcularArea(){
 
-                for(let i = 1; i <= 100; i++){
-                    tabuadaHTML += `${i} x ${btnValue} = ${i * btnValue} <br>`
-                }
-                tabuada.innerHTML = tabuadaHTML
-            }
+            const base = document.getElementById("base");
+            const altura = document.getElementById("altura");
+            let trianguloHTML = "";
+            const baseValue = parseFloat(base.value);
+            const alturaValue = parseFloat(altura.value);
+
+            const area = baseValue * alturaValue / 2;
+
+            trianguloHTML += `
+                <p>A base do triangulo e: ${baseValue}</p>
+                <p>A altura do triangulo e: ${alturaValue}</p>
+
+                <p>A area do triangulo e: ${baseValue} x ${alturaValue} / 2 = ${(baseValue * alturaValue) / 2}</p>
+
+            `
+            triangulo.innerHTML = trianguloHTML
+        
+        }
+
             
-
-                function apagarTabuada(){
-                    tabuadaHTML = "";
-                    tabuada.innerHTML = "";
-                }
-                 
-                mostrarTabuada();
-
-            
-
+        
     </script>
 </body>
 </html>
