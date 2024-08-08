@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Calcular a Area da circunferência</h2>
+    <p>Raio: </p>
+    <!-- pi x radio² -->
+    <input type="number" id="raio"> 
+
+    <button onclick="calcular()">Calcular</button>
+
+    <div id="circunferencia"></div>
+
+    <script>
+        const circunferencia = document.getElementById("circunferencia");
+
+        function calcular(){
+            let circunferenciaHTML = "";
+            // calcular o raio da circuferencia 
+            const raio = document.getElementById("raio");
+            const raioValue = parseFloat(raio.value);
+            const piValue = Math.PI;
+
+
+            const area = piValue * (raioValue ** 2);
+
+            circunferenciaHTML = ` 
+                <p> A circuferencia e: ${area.toFixed(2)}</p>
+                <p> A area e: ${piValue.toFixed(2)} x ${raioValue.toFixed(2)}² = ${area.toFixed(2)}</p>
+            `;
+
+            circunferencia.innerHTML = circunferenciaHTML;
+        }
+    </script>
+
+</body>
+</html>
