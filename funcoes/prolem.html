@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Mostrar raio em output</h2>
+    <input type="text" id="number">
+    <button type="button" onclick="mostrarRaioPrompt()">Calcular com prompt</button>
+    <button type="button" onclick="mostrarRaioOutput()">Calcular com ouput</button>
+    
+    <div id="circunferencia"></div>
+    <script>
+        const btn = document.getElementById("number");
+        const circunferencia = document.getElementById("circunferencia");
+
+        function mostrarRaioPrompt(){
+            let circunferenciaHTML = "";
+            // calcular o raio da circuferencia 
+            const raio = document.getElementById("raio");
+            const raioValue = parseFloat(prompt("digite o raio: "));
+            const piValue = Math.PI;
+
+
+            const area = piValue * (raioValue ** 2);
+
+            circunferenciaHTML = ` 
+                <p> A circuferencia e: ${area.toFixed(2)}</p>
+                <p> A area e: ${piValue.toFixed(2)} x ${raioValue.toFixed(2)}² = ${area.toFixed(2)}</p>
+            `;
+
+            circunferencia.innerHTML = circunferenciaHTML;
+        }
+        
+
+    </script>
+</body>
+</html>
