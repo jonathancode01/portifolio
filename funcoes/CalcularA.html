@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Mostrar raio em output</h2>
+    <label>
+        <input type="text" id="raio">
+    </label>
+    <br>
+    <button type="button" onclick="mostrarAreaPromptAlert()">Calcular com prompt e mostrar no alert</button>
+    <br>
+    <button type="button" onclick="mostrarAreaInputAlert()">Calcular com input e mostrar no alert</button>
+    <br>
+    <button type="button" onclick="mostrarAreaPromptOutput()">Calcular com prompt e mostrar no output</button>
+    <br>
+    <button type="button" onclick="mostrarAreaInputOutput()">Calcular com input e mostrar no output</button>
+    
+    <div id="output"></div>
+
+
+
+
+
+    <script>
+
+        const raio = document.getElementById("raio");
+        const output = document.getElementById("output");
+
+        function mostrarAreaPromptAlert(){
+            let raio = parseFloat(prompt("Digite o raio: "));
+            let area = calcularArea(raio);
+            alert(`A Area da circunferencia do raio ${raio} e: ${area.toFixed(2)}`);
+        }
+
+        function mostrarAreaInputAlert(){
+            let raioInput = parseFloat(raio.value);
+            let area = calcularArea(raioInput);
+            alert(`A Area da circunferencia do raio ${raioInput} e: ${area.toFixed(2)}`);
+        }
+
+        function mostrarAreaPromptOutput(){
+            let raio = parseFloat(prompt("Digite o raio: "));
+            let area = calcularArea(raio);
+            output.innerHTML = `A Area da circunferencia do raio ${raio} e: ${area.toFixed(2)}`
+        }
+        
+        function mostrarAreaInputOutput(){
+            let raioInput = parseFloat(raio.value);
+            let area = calcularArea(raioInput);
+            output.innerHTML = `A Area da circunferencia do raio ${raioInput} e: ${area.toFixed(2)}`
+        }
+
+        function calcularArea(raio){
+            const pi = Math.PI;
+            let area = pi * raio * raio;
+
+            return area
+        }
+                
+
+    </script>
+</body>
+</html>
