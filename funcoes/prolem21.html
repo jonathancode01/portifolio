@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Mostrar raio em output</h2>
+    <label>
+        <input type="text" id="raio">
+    </label>
+    <br>
+    <button type="button" onclick="mostrarAreaPromptAlert()">Calcular com prompt e mostrar no alert</button>
+    <br>
+    <button type="button" onclick="mostrarAreaInputAlert()">Calcular com ouput e mostrar no alert</button>
+    <br>
+    <button type="button" onclick="mostrarAreaPromptOutput()">Calcular com prompt e mostrar no output</button>
+    <br>
+    <button type="button" onclick="mostrarAreaInputOutput()">Calcular com input e mostrar no output</button>
+    
+    <div id="output"></div>
+
+
+
+
+
+    <script>
+
+        const raio = document.getElementById("raio");
+        const output = document.getElementById("output");
+
+        function mostrarAreaPromptAlert(){
+            let raio = parseFloat(prompt("Digite o raio: "));
+            let mensagem = mostrarArea(raio);
+            alert(mensagem);
+        }
+           
+
+
+        function mostrarArea(raio){
+            const pi = Math.PI;
+            let area = pi * raio * raio;
+
+            return `A Area da circunferencia do raio ${raio} e: ${area.toFixed(2)}`
+        }
+        
+
+    </script>
+</body>
+</html>

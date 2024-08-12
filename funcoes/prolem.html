@@ -17,20 +17,20 @@
         const circunferencia = document.getElementById("circunferencia");
 
         function mostrarRaioPrompt(){
-            const raioValue = parseFloat(prompt("digite o raio: "));
+            let raioValue = parseFloat(prompt("digite o raio: "));
             mostrarArea(raioValue);
         }
 
         function mostrarRaioOutput(){
-            // calcular o raio da circuferencia 
-            const raioValue = parseFloat(raio.value);
+            let raioValue = parseFloat(raio.value);
             mostrarArea(raioValue);
         }
 
-        function mostrarArea(){
+        function mostrarArea(raio){
             const pi = Math.PI;
-            let area = pi * raioValue ** 2;
-            circunferencia.innerHTML = `A Area da circunferencia do raio ${raioValue} e: ${area.toFixed(2)}`
+            let area = pi * raio * raio;
+
+            circunferencia.innerHTML = `A Area da circunferencia do raio ${raio} e: ${area.toFixed(2)}`
         }
         
 
