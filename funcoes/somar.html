@@ -6,15 +6,35 @@
     <title>Document</title>
 </head>
 <body>
+    <h2>Função somar</h2>
+    <br>
+    <h3>Número1</h1>
+    <input type="number" id="number1">
+    <h3>Número2</h1>
+    <input type="number" id="number2">
+    <div id="somar"></div>
 
+    <button onclick="soma()">Calcular</button>
     <script>
-        function somar(n1, n2){
-            return n1 + n2
+        
+        const somar = document.getElementById("somar");
 
+        // função para somar dois números
+        function soma(){
+
+            const number1 = document.getElementById("number1");
+            const number2 = document.getElementById("number2");
+            let somarHTML = "";
+            const n1 = parseFloat(number1.value);
+            const n2 = parseFloat(number2.value);
+
+            const result = n1 + n2;
+
+            somarHTML = `A soma entre ${n1} e ${n2} e: ${result}`;
+            somar.innerHTML = somarHTML;
+            
+         
         }
-
-        let resultado = somar(5,5);
-        console.log(resultado)
 
     </script>
 </body>
