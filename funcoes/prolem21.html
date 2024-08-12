@@ -13,7 +13,7 @@
     <br>
     <button type="button" onclick="mostrarAreaPromptAlert()">Calcular com prompt e mostrar no alert</button>
     <br>
-    <button type="button" onclick="mostrarAreaInputAlert()">Calcular com ouput e mostrar no alert</button>
+    <button type="button" onclick="mostrarAreaInputAlert()">Calcular com input e mostrar no alert</button>
     <br>
     <button type="button" onclick="mostrarAreaPromptOutput()">Calcular com prompt e mostrar no output</button>
     <br>
@@ -35,8 +35,24 @@
             let mensagem = mostrarArea(raio);
             alert(mensagem);
         }
-           
 
+        function mostrarAreaInputAlert(){
+            let raioInput = parseFloat(raio.value);
+            let mensagem = mostrarArea(raioInput);
+            alert(mensagem);
+        }
+
+        function mostrarAreaPromptOutput(){
+            let raio = parseFloat(prompt("Digite o raio: "));
+            let mensagem = mostrarArea(raio);
+            output.innerHTML = mensagem
+        }
+        
+        function mostrarAreaInputOutput(){
+            let raioInput = parseFloat(raio.value);
+            let mensagem = mostrarArea(raioInput);
+            output.innerHTML = mensagem
+        }
 
         function mostrarArea(raio){
             const pi = Math.PI;
@@ -44,7 +60,7 @@
 
             return `A Area da circunferencia do raio ${raio} e: ${area.toFixed(2)}`
         }
-        
+                
 
     </script>
 </body>
