@@ -7,31 +7,30 @@
 </head>
 <body>
     <h2>Mostrar raio em output</h2>
-    <input type="text" id="number">
+    <input type="text" id="raio">
     <button type="button" onclick="mostrarRaioPrompt()">Calcular com prompt</button>
     <button type="button" onclick="mostrarRaioOutput()">Calcular com ouput</button>
     
     <div id="circunferencia"></div>
     <script>
-        const btn = document.getElementById("number");
+        const raio = document.getElementById("raio");
         const circunferencia = document.getElementById("circunferencia");
 
         function mostrarRaioPrompt(){
-            let circunferenciaHTML = "";
-            // calcular o raio da circuferencia 
-            const raio = document.getElementById("raio");
             const raioValue = parseFloat(prompt("digite o raio: "));
-            const piValue = Math.PI;
+            mostrarArea(raioValue);
+        }
 
+        function mostrarRaioOutput(){
+            // calcular o raio da circuferencia 
+            const raioValue = parseFloat(raio.value);
+            mostrarArea(raioValue);
+        }
 
-            const area = piValue * (raioValue ** 2);
-
-            circunferenciaHTML = ` 
-                <p> A circuferencia e: ${area.toFixed(2)}</p>
-                <p> A area e: ${piValue.toFixed(2)} x ${raioValue.toFixed(2)}² = ${area.toFixed(2)}</p>
-            `;
-
-            circunferencia.innerHTML = circunferenciaHTML;
+        function mostrarArea(){
+            const pi = Math.PI;
+            let area = pi * raioValue ** 2;
+            circunferencia.innerHTML = `A Area da circunferencia do raio ${raioValue} e: ${area.toFixed(2)}`
         }
         
 
