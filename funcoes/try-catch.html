@@ -15,7 +15,7 @@
     let obj = { nome: "Jonathan", email: "jonathan@email.com"}
 
     try{
-        document.getElementById("output").innerHTML = `Nome: ${obj.nome} Email: ${obj.email}`
+        document.getElementById("output").innerHTML = `Nome: ${obj.nome} <br> Email: ${obj.email}`
     } catch(erro){
         console.log(erro)
         console.log(e.message)
@@ -28,7 +28,29 @@
     <script src="area.js" ></script>
 
     <script>
-        console.log(calcularAreaRetangulo(2,"3")) // mostrar no console 
+        try{
+        console.log(calcularAreaRetangulo(2,"4")) // mostrar no console 
+        }catch(e){
+            alert("Erro: " + e.message)
+        }
+
+
+        try{
+        let areaT = calcularAreaTriangulo(2,4)
+        document.getElementById("output").innerHTML += `<br> Area do Triangulo: ${areaT}`
+        }catch(e){
+            alert("Erro: " + e.message)
+        }
+
+        try {
+        let circulo = calcularAreaCirculo(10)
+        document.getElementById("output").innerHTML += `<br> Area do Circulo: ${circulo}`
+        }catch(e){
+            alert("Erro: " + e.message)
+        }
+
+
+        alert("fim do programa")
     </script>
 
 
