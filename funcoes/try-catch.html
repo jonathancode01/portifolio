@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Try-Catch</h1>
+
+    <div id="output"></div>
+
+    <script>
+
+    let obj = { nome: "Jonathan", email: "jonathan@email.com"}
+
+    try{
+        document.getElementById("output").innerHTML = `Nome: ${obj.nome} Email: ${obj.email}`
+    } catch(erro){
+        console.log(erro)
+        console.log(e.message)
+        alert("Erro: " + e.message)
+    }finally{
+        // alert("Fim")
+    }
+    </script>
+
+    <script src="area.js" ></script>
+
+    <script>
+        console.log(calcularAreaRetangulo(2,"3")) // mostrar no console 
+    </script>
+
+
+</body>
+</html>
