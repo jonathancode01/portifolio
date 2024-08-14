@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>classe</h1>
+
+    <script>
+         // implementar dois metodos, comprar() e adicionar() para a classe produto
+
+        // classe Produto
+        class Produto {
+            constructor(nome, quantidade){
+               console.log("construtor chamado")
+               this.nome = nome
+               this.quantidade = (quantidade < 0 ? 0 : quantidade) // se quantidade menor que 0 atribua 0
+            } 
+
+            // metodos
+            comprar(quantidade){
+                if(quantidade < 0){
+                    throw Error("Quantidade inválida");
+                }
+
+                if(quantidade > this.quantidade){
+                    console.log("Quantidade inválida")
+                    return null
+                }
+
+                this.quantidade -= quantidade
+            }
+
+            // metodo adicionar
+            adicionar(quantidade){
+                if(quantidade < 0){
+                    throw Error("Quantidade inválida");
+                }
+
+                this.quantidade += quantidade
+                console.log("Quantidade atualizada: ", this.quantidade)
+                
+            }
+        }
+        // criar um metodo chamado imprime quantidade ou verificaQuantidade
+
+        // instanciar a classe
+        const caneta = new Produto("caneta", 10) // cria objeto caneta
+        // const lapis = new Lapis("lapis", 10) // cria objeto lapis
+
+        </script>
+
+</body>
+</html>

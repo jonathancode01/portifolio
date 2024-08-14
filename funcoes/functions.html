@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Functions</h1>
+
+    <script>
+        // function declaration
+        function ola1(nome){
+            console.log("Ola de function declaration, ", + nome);
+        }
+
+        // function expression
+        const ola2 = function(nome){
+            console.log("Ola de function expression, ", + nome);
+        }
+
+        // arrow function
+        const ola3 = (nome) => {
+            console.log("Ola de arrow function, ", + nome);
+        }
+        console.log(ola3)
+
+        //
+
+        const arr = [ola1, ola2, function(){
+            console.log("Ola de Arrow function")
+        }];
+
+    </script>
+</body>
+</html>

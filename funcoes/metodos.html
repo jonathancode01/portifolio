@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Metodos</h1>
+
+    <script>
+
+        const produto = {
+            nome: "Notebook",
+            quantidade: 10,
+            comprar: function(quantidade){
+
+                if(quantidade > this.quantidade){
+                    console.log("Quantidade inválida")
+                    return null
+                }else{
+                    console.log("Comprando canetas")
+                }
+                this.quantidade -= quantidade
+            }
+        }
+        console.log(produto)
+
+        produto.quantidade -= 3
+
+        console.log(produto)
+        produto.quantidade -= 4
+        console.log(produto)
+
+        produto.quantidade = 10
+        produto.comprar(3)
+        console.log("Você agora tem:", + produto.quantidade + " unidades de " + produto.nome)
+
+        produto.comprar(13)
+        console.log("Você agora tem:", + produto.quantidade + " unidades de " + produto.nome)
+        console.log(produto)
+
+    </script>
+</body>
+</html>
