@@ -28,9 +28,11 @@
                 if(quantidade > this.quantidade){
                     console.log("Quantidade inválida")
                     return null
+                    
                 }
 
                 this.quantidade -= quantidade
+                console.log("Quantidade atualizada: ", this.quantidade)
             }
 
             // metodo adicionar
@@ -43,9 +45,13 @@
                 console.log("Quantidade atualizada: ", this.quantidade)
                 
             }
-        }
-        // criar um metodo chamado imprime quantidade ou verificaQuantidade
 
+            // metodo verificaQuantidade
+            // criar um metodo chamado verificaQuantidade pra verificar a quantidade em estoque
+            verificaQuantidade(){
+                console.log("Estoque do produto: ",this.quantidade);
+            }
+        }
         // instanciar a classe
         const caneta = new Produto("caneta", 10) // cria objeto caneta
         // const lapis = new Lapis("lapis", 10) // cria objeto lapis
