@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>banco</h2>
+
+
+
+    <script>
+
+
+        class contaBancaria {
+            #saldo // propriedade privada
+            constructor(saldoInicial) {
+            this.#saldo = saldoInicial
+            }
+            
+            get saldo(){
+                return `O saldo atual e de ${this.#saldo}`
+            }
+
+            set saldo(novoSaldo){
+                console.log("O saldo só e acessivel atraves do metodo sacar()")
+                this.#saldo = novoSaldo
+            }
+            depositarValor(valor){
+                if(valor > 0){
+                    this.#saldo += valor
+                    console.log("Deposito de " + valor + " foi efetuado com sucesso")
+                }
+
+            }
+            sacarValor(valor){
+                if(this.#saldo > 0 && this.#saldo >= valor){
+                    this.#saldo -= valor
+                    console.log("Saque de " + valor + " foi efetuado com sucesso")
+                }else{
+                    console.log("Saldo insuficiente para realizar o saque de " + valor);
+                }
+            }
+        }
+
+        const minhaConta = new contaBancaria(100)
+
+
+       minhaConta.sacarValor(50)
+       minhaConta.depositarValor(200)
+       minhaConta.sacarValor(300)
+       minhaConta.sacarValor(250)
+
+       console.log(minhaConta.saldo)
+
+       minhaConta.depositarValor(500)
+
+       console.log(minhaConta.saldo)
+
+
+    </script>
+</body>
+</html>
