@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>classe</h1>
+
+    <script>
+         // implementar dois metodos, comprar() e adicionar() para a classe produto
+
+        // classe Produto
+        class Aluno {
+            constructor(nome, curso){
+                this.nome = nome
+                this.curso = curso
+                this.notas = [];  
+            }
+
+            // metodos
+            informarNotas(n1, n2, n3, n4){
+                this.notas = [n1, n2, n3, n4]; // push e adicionar notas
+            }
+
+            #calcularNotas(){
+                const soma = this.notas[0] + this.notas[1] + this.notas[2] + this.notas[3];
+                const media = soma / 4;
+                return media
+            }
+
+            #mostrarMedia(){
+                if(this.notas.length === 0){ // se o array estiver vazio
+                    console.log("Nenhuma nota foi informada")
+                        return 
+                }
+                const media = this.calcularNotas();
+                console.log(`O aluno ${this.nome} da turma ${this.curso} teve a media de ${media.toFixed(2)}`);
+            }
+        }
+
+        // instanciar a classe. Instanciar = criar um objeto
+        const jonathan = new Aluno("Jonathan", "Ciência da Computação");
+
+        jonathan.informarNotas(10, 9, 8, 7);
+        jonathan.mostrarMedia();
+
+        </script>
+
+</body>
+</html>

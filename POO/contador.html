@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>contador</h2>
+
+
+
+    <script>
+        
+        
+        class Contador {
+            #cont // propriedade privada
+            constructor(){
+                this.#cont = 0;
+            }
+
+            // metodos
+
+            incrementar(){
+                // preciso aumentar o contador
+                    this.#cont++;
+                    console.log("Contador incrementado")
+                }
+
+                valorAtual(){
+                    console.log(("O valor atual do contador é: " + this.#cont));
+                    return this.#cont;
+                }
+
+            }
+
+        // instanciar
+        const c = new Contador();
+
+        c.abacaxi = 10
+        console.log(c)
+
+
+        
+    </script>
+</body>
+</html>
